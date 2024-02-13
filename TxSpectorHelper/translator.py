@@ -322,15 +322,15 @@ def solve1benchmark(exploitTx, use_cache = True):
         #     json.dump(result_dict, f, indent = 2)
         writeCompressedJson(path, result_dict)
             
-    # print(path)
-    # kk = None
-    # with open(path, 'r') as f:
-    #     kk = json.load(f)
-    kk = readCompressedJson(path)
-    translated = TxSpectorTranslator().parseLogs(kk)
-    path = SCRIPT_DIR + '/../TxSpectorHelper/translated/{}.txt'.format(exploitTx)
-    with open("{}.txt".format(exploitTx), "w") as f:
-        f.write(translated)
+    # # print(path)
+    # # kk = None
+    # # with open(path, 'r') as f:
+    # #     kk = json.load(f)
+    # kk = readCompressedJson(path)
+    # translated = TxSpectorTranslator().parseLogs(kk)
+    # path = SCRIPT_DIR + '/../TxSpectorHelper/translated/{}.txt'.format(exploitTx)
+    # with open("{}.txt".format(exploitTx), "w") as f:
+    #     f.write(translated)
 
     gc.collect()
 
@@ -414,9 +414,9 @@ if __name__ == "__main__":
     # exploitTx = '0x44aad3b853866468161735496a5d9cc961ce5aa872924c5d78673076b1cd95aa'
     # solve1benchmark(exploitTx)
 
-    # # CreamFi2_1
-    # exploitTx = '0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92'
-    # solve1benchmark(exploitTx)
+    # CreamFi2_1
+    exploitTx = '0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92'
+    solve1benchmark(exploitTx)
     # # CreamFi2_2
     # exploitTx = '0x0fe2542079644e107cbf13690eb9c2c65963ccb79089ff96bfaf8dced2331c92'
     # solve1benchmark(exploitTx)
